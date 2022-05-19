@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Address Book</h1>
+
+<p *ngIf="!adressBook"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="adressBook">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let people of adressBook">
+      <td>{{ people.name }}</td>
+      <td>{{ people.address }}</td>
+    </tr>
+  </tbody>
+</table>
